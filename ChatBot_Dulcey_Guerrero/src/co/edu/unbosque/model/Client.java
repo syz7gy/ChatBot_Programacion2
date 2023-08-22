@@ -39,6 +39,7 @@ public class Client extends Thread {
 			this.out = new ObjectOutputStream(s.getOutputStream());
 
 			line = sc.nextLine();
+
 			this.out.writeUTF(line);
 
 			this.out.close();
@@ -49,7 +50,7 @@ public class Client extends Thread {
 			System.out.println(in.readUTF());
 			this.in.close();
 			this.ss.close();
-			
+
 		} catch (IOException e) {
 			System.out.println(e);
 		}

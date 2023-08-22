@@ -10,7 +10,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Server extends Thread{
+public class Server extends Thread {
 	
 	protected Socket s;
 	protected Socket replyS;
@@ -31,6 +31,7 @@ public class Server extends Thread{
 		this.in = null;
 		this.port = port;
 		this.clientAddress = clientAddress;
+		
 		file = new File("src/co/edu/unbosque/model/persistance/Answers.txt");
 		answers = new ArrayList<>();
 		try {
@@ -45,8 +46,7 @@ public class Server extends Thread{
 		}
 		while(sc.hasNext()) {
 			answers.add(sc.nextLine());
-		}
-		
+		}	
 	}
 	
 	@Override
@@ -55,8 +55,4 @@ public class Server extends Thread{
 		System.out.println(answers.toString());
 		
 	}
-	
-	
-	
-
 }

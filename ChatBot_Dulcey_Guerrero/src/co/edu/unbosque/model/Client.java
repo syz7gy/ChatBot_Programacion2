@@ -32,12 +32,14 @@ public class Client extends Thread {
 			s = new Socket(this.address, this.port);
 			System.out.println("Connected");
 
-			out = new DataOutputStream(new BufferedOutputStream(s.getOutputStream()));
+			out = new DataOutputStream(s.getOutputStream());
 			in = new DataInputStream(new BufferedInputStream(s.getInputStream()));
 			System.out.println(in.readUTF());
 			line = sc.nextLine();
-
-			out.writeUTF(line);
+			while(true) {
+				out.writeUTF(line);
+			}
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();

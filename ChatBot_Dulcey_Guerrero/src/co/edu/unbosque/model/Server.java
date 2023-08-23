@@ -49,21 +49,41 @@ public class Server extends Thread {
 
 	@Override
 	public void run() {
+		while(true) {
+			try {
+				ss = new ServerSocket(port);
+				System.out.println("Server started");
+				System.out.println("Waiting for a client to connect...");
+				s = ss.accept();
+				
+				in = new DataInputStream(new BufferedInputStream(s.getInputStream()));
+				System.out.println(
+						"Client accepted. " + "\nWelcome to Paulita's and Juanchito's chatbot." + "\nSelenct an option:");
+				System.out.println(menu().toString());
+				
+				String mensaje = in.readUTF();
+				int valor = Integer.parseInt(mensaje);
+				while(valor!=21) {
+					replyS = new Socket(clientAddress, port+1);
+					out = new DataOutputStream(new BufferedOutputStream(s.getOutputStream()));
+					out.writeUTF(botAnswers(mensaje) + "\n");
+					System.out.println();
+					System.out.println(menu().toString());
+					mensaje = in.readUTF();
+				}
+				if(valor==21) {
+					System.out.println("Closing server...");
+					in.close();
+					out.close();
+					ss.close();
+					s.close();
+				}
 
-		try {
-			ss = new ServerSocket(port);
-			System.out.println("Server started");
-			System.out.println("Waiting for a client to connect...");
-			s = ss.accept();
-			out = new DataOutputStream(new BufferedOutputStream(s.getOutputStream()));
-			in = new DataInputStream(new BufferedInputStream(s.getInputStream()));
-			System.out.println(
-					"Client accepted. " + "\nWelcome to Paulita's and Juanchito's chatbot." + "\nSelenct an option:");
-			System.out.println(menu().toString());
-
-		} catch (Exception e) {
-			e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
 	}
 
 	public StringBuilder menu() {
@@ -92,32 +112,52 @@ public class Server extends Thread {
 		return sb;
 	}
 
-	private String botAnswers(String rta) {
+	public String botAnswers(String rta) {
 		int resp = Integer.parseInt(rta);
+		String r = "";
 		switch (resp) {
 		case 1:
-			return null;
+			r = answers.get(0);
 		case 2:
+			r = answers.get(1);
 		case 3:
+			r = answers.get(2);
 		case 4:
+			r = answers.get(3);
 		case 5:
+			r = answers.get(4);
 		case 6:
+			r = answers.get(5);
 		case 7:
+			r = answers.get(6);
 		case 8:
+			r = answers.get(7);
 		case 9:
+			r = answers.get(8);
 		case 10:
+			r = answers.get(9);
 		case 11:
+			r = answers.get(10);
 		case 12:
+			r = answers.get(11);
 		case 13:
+			r = answers.get(12);
 		case 14:
+			r = answers.get(13);
 		case 15:
+			r = answers.get(14);
 		case 16:
+			r = answers.get(15);
 		case 17:
+			r = answers.get(16);
 		case 18:
+			r = answers.get(17);
 		case 19:
+			r = answers.get(18);
 		case 20:
-
+			r = answers.get(19);
 		}
-		return rta;
+		return r;
+		
 	}
 }

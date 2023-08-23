@@ -1,3 +1,169 @@
-Hola hermanos
-Pedazos
-Hijos mios
+Genre: Pop
+
+Artists:
+
+Britney Spears
+Songs:
+1. ...Baby one more time
+2. Oops!...I did it again
+3. Work bitch
+
+Lady Gaga
+Songs:
+1. Poker face
+2. Bad romance
+3. Applause
+
+Christina Aguilera
+Songs:
+1. Ven conmigo
+2. Beautiful
+3. Not myself tonight
+
+Kylie Minogue
+Songs:
+1. Can't get you out of my head
+2. I was gonna cancel
+3. Padam Padam
+
+Madonna
+Songs:
+1. Like a virgin
+2. Nothing really matters
+3. Hung up
+
+Genre: Alternative
+
+Artist:
+
+Melanie Martinez
+Songs:
+1. Cry baby
+2. Play date
+3. Void
+
+Marina
+Songs:
+1. How to be a heartbreaker
+2. Primadonna
+3. Ancient Dreams in a Modern Land
+
+Grimes
+Songs:
+1. Oblivion
+2. Kill V. maim
+3. Shinigami eyes
+
+Bjork
+Songs:
+1. Venus As A Boy
+2. It's Oh so quiet
+3. Crystalline
+
+Charli XCX
+Songs:
+1. Boom clap
+2. Vroom Vroom
+3. Good Ones
+
+Genre: Dance
+
+Artists:
+
+Dua Lipa
+Songs:
+1. Physical
+2. New rules
+3. Dance the night
+
+Ava Max
+Songs:
+1. My Head & My Heart
+2. Maybe You're The Problem
+3. Diamonds & Dancefloors
+
+Kim Petras
+Songs:
+1. Coconuts
+2. Slut Pop
+3. Party Till I Die
+
+Lizzo
+Songs:
+1. Pink
+2. About Damn Time
+3. 2 Be Loved (Am I Ready)
+
+Kesha
+Songs:
+1. Tik Tok
+2. Die Young
+3. Backstabber
+
+Genre: Rock
+
+Artists:
+
+Nickelback
+Songs:
+1. How You Remind Me
+2. Rockstar
+3. Burn It to the Ground
+
+The Donnas
+Songs:
+1. Take it Off
+2. Rock 'n' Roll Machine
+3. Who Invited You
+
+Linkin Park
+Songs:
+1. In the End
+2. Numb
+3. Faint
+
+Hoobastank
+Songs:
+1. The Reason
+2. Crawling In The Dark
+3. Out Of Control
+
+blink-182
+Songs:
+1. All The Small Things
+2. What's My Age Again?
+3. I Miss You 
+
+Genre: R&B
+
+Artists:
+
+Doja Cat
+Songs:
+1. Say So
+2. Attention
+3. Addiction
+
+Nicki Minaj
+Songs:
+1. Super Bass
+2. Starships
+3. Anaconda
+
+Cardi B
+Songs:
+1. WAP
+2. Up
+3. I like It
+
+Ice Spice
+Songs:
+1. Boy's a Liar Pt 2.
+2. Deli
+3. In Ha Mood
+
+Kali Uchis
+Songs:
+1. Moonlight
+2. Telepatia
+3. Melting

@@ -1,91 +1,92 @@
 package co.edu.unbosque.model;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import co.edu.unbosque.model.persistance.FileHandler;
+//import co.edu.unbosque.model.persistance.FileHandler;
 
 public class Server extends Thread {
 
 	protected Socket s;
 	protected Socket replyS;
 	protected ServerSocket ss;
-	protected ObjectOutputStream out;
-	protected ObjectInputStream in;
+	protected DataOutputStream out;
+	protected DataInputStream in;
 	private int port;
 	private String clientAddress;
+	private static Scanner sc;
+	private static File file;
 	private ArrayList<String> answers;
 	
 
 	public Server(int port) {
-		this.s = null;
-		this.replyS = null;
-		this.ss = null;
-		this.out = null;
-		this.in = null;
 		this.port = port;
 		this.clientAddress = clientAddress;
-
-		answers = loadFromFile("Answers.txt");
+		file = new File("src/co/edu/unbosque/model/persistance/Answers.txt");
+		answers = new ArrayList<>();
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("Error: File 'Answers.txt' was not found.");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Error: Check permissions for file 'Answers.txt'.");
+			e.printStackTrace();
+		}
+		while(sc.hasNext()) {
+			answers.add(sc.nextLine());
+		}
 		
 	}
-	
-	private ArrayList<String> loadFromFile(String file){
-		ArrayList<String> fromFile = new ArrayList<>();
-		String content = FileHandler.abrirArchivoDeTexto(file);
-		String[] lines = content.split("\n");
-		for (String line : lines) {
-			fromFile.add(line);
-		}
-		return fromFile;
-	}
+
 
 	@Override
 	public void run() {
 
 		try {
-			this.ss = new ServerSocket(this.port);
+			
+			out = new DataOutputStream(new BufferedOutputStream(s.getOutputStream()));
+			in = new DataInputStream(new BufferedInputStream(s.getInputStream()));
+			
+			ss = new ServerSocket(this.port);
 			System.out.println("Server started");
 			System.out.println("Waiting for a client to connect...");
 			this.s = ss.accept();
-			System.out.println("Client accepted. " + "\nWelcome to Paulita's and Juanchito's musical chatbot");
+			System.out.println("Client accepted. " + "\nWelcome to Paulita's and Juanchito's chatbot");
 			
-			System.out.println("\nWrite an artist down so the ChatBot can recommend you a song: ");
-			this.in = new ObjectInputStream(new BufferedInputStream(s.getInputStream()));
+			System.out.println("\nWould you like to start? ");
+			
+			
 
-			in.readObject();
-
-			this.replyS = new Socket(this.s.getInetAddress(), this.port + 1);
-
-			this.out = new ObjectOutputStream(replyS.getOutputStream());
-			this.out.writeUTF("Goodbye");
-			this.out.close();
-			this.replyS.close();
-			this.in.close();
-			this.ss.close();
+			String rta = in.readUTF();
+			
+			out.writeUTF(menu().toString());
+			
+			
 
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 
-		if (this.isInterrupted()) {
-			System.out.println("Closing connection");
-
-			try {
-				s.close();
-				in.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 
 	}
+	
+	public String menu() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\n1) Quien es mejor?");
+		sb.append("\n1) Quien es mejor?");
+		sb.append("\n1) Quien es mejor?");
+		return sb.toString();
+	}
+	
+//	public String 
 }

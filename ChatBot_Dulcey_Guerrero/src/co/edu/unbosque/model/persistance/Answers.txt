@@ -4,33 +4,33 @@ Artists:
 
 Britney Spears
 Songs:
-1. ...Baby one more time
-2. Oops!...I did it again
-3. Work bitch
+1. ...Baby One More Time
+2. Oops!...I Did It Again
+3. Work Bitch
 
 Lady Gaga
 Songs:
-1. Poker face
-2. Bad romance
+1. Poker Face
+2. Bad Romance
 3. Applause
 
 Christina Aguilera
 Songs:
-1. Ven conmigo
+1. Ven Conmigo (Solamente Tu)
 2. Beautiful
-3. Not myself tonight
+3. Not Myself Tonight
 
 Kylie Minogue
 Songs:
-1. Can't get you out of my head
-2. I was gonna cancel
+1. Can't Get You out of My Head
+2. I Was Gonna Cancel
 3. Padam Padam
 
 Madonna
 Songs:
-1. Like a virgin
-2. Nothing really matters
-3. Hung up
+1. Like a Virgin
+2. Nothing Really Matters
+3. Hung Up
 
 Genre: Alternative
 
@@ -38,13 +38,13 @@ Artist:
 
 Melanie Martinez
 Songs:
-1. Cry baby
-2. Play date
+1. Cry Baby
+2. Play Date
 3. Void
 
 Marina
 Songs:
-1. How to be a heartbreaker
+1. How to Be a Heartbreaker
 2. Primadonna
 3. Ancient Dreams in a Modern Land
 
@@ -62,7 +62,7 @@ Songs:
 
 Charli XCX
 Songs:
-1. Boom clap
+1. Boom Clap
 2. Vroom Vroom
 3. Good Ones
 
@@ -73,8 +73,8 @@ Artists:
 Dua Lipa
 Songs:
 1. Physical
-2. New rules
-3. Dance the night
+2. New Rules
+3. Dance The Night
 
 Ava Max
 Songs:
